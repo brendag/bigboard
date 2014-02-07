@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>Faculty Controller</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Sanchez:400,400italic' rel='stylesheet' type='text/css'>
+
+	<style>
+		body {
+			font-family: 'Sanchez', arial, sans-serif;
+			width:100%;
+			height:100%;
+			text-align: center;
+			color: #000000;
+			background-color: #FFF;
+		}
+		
+		#controllerScreen {
+			display:none;
+		}
+		
+		.middle{
+			width: 31%;
+			float: left;
+			clear: none;
+			margin: 0.33%;
+			padding: 0.33%;
+			background-color: grey;
+			border-radius: 6px;
+		}
+		
+		.top{
+			margin-left: 32.65%;
+			width: 31%;
+			clear: both;
+			padding: 0.33%;
+			background-color: #004F27;
+			border-radius: 6px;
+			color: #FFF;
+		}
+		
+		.bottom{
+			margin-left: 32.65%;
+			width: 31%;
+			clear: both;
+			padding: 0.33%;
+			background-color: grey;
+			border-radius: 6px;
+		}
+	</style>
+	
+	<!-- Jquery Import  -->
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+	<script>
+		$(document).ready(init);
+		function init(){
+			//set to the url that monitor server is hosted at
+			var SERVERURL = "http://ix.cs.uoregon.edu:2222/pro1/Controller"
+
+			//set to the url that your monitor html file is hosted
+			var MONITORHTMLURL = "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/fac_app.html"
+			
+			//state of the game : connecting, ready to start
+			var $currentState = $("#connectingScreen");
+			
+			$("#acceptPin").click(function(event){
+
+				$("#connectingHeader").html("Attempting to connect to Monitor Manager")
+
+				//ask to connect to the monitor
+				$.post(SERVERURL, {pin: $("#pin").val(), token: "", url: MONITORHTMLURL}, function(data){
+					// Receive "connected" if succeeds
+					if(data == "connected"){
+						//hide old state
+						$currentState.hide();
+						$currentState = $("#controllerScreen");
+						
+						//show new state
+						$currentState.show();
+					//fail
+					}else{
+						$("#connectingHeader").html("Failed to connect to monitor manager, please try again.")
+					}
+				}).fail(function(){
+					//just make them reload the page
+					$("#connectingHeader").html("Failed to connect to monitor manager, please try again.");
+				});
+			});
+			
+			$("#415").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "415",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#415").css( "background-color", "white" );
+						$("#415").css( "color", "#004F27" );
+						$("#415").css( "border-style", "solid" );
+						$("#415").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#422").css( "background-color", "#004F27" );
+						$("#422").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+
+					}
+				});
+			});
+			
+			$("#315").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "315",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#315").css( "background-color", "white" );
+						$("#315").css( "color", "#004F27" );
+						$("#315").css( "border-style", "solid" );
+						$("#315").css( "border-color", "#004F27" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#422").css( "background-color", "#004F27" );
+						$("#422").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+					}
+				});
+			});
+			
+			$("#330").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "330",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#330").css( "background-color", "white" );
+						$("#330").css( "color", "#004F27" );
+						$("#330").css( "border-style", "solid" );
+						$("#330").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#422").css( "background-color", "#004F27" );
+						$("#422").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+					}
+				});
+			});
+			
+			$("#422").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "422",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#422").css( "background-color", "white" );
+						$("#422").css( "color", "#004F27" );
+						$("#422").css( "border-style", "solid" );
+						$("#422").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+					}
+				});
+			});
+			
+			$("#425").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#425").css( "background-color", "white" );
+						$("#425").css( "color", "#004F27" );
+						$("#425").css( "border-style", "solid" );
+						$("#425").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#422").css( "background-color", "#004F27" );
+						$("#422").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+					}
+				});
+			});
+		}
+	</script>
+</head>
+<body>
+	<!-- <div id = "connectingScreen">
+		<h1 id = "connectingHeader">Enter the pin that is shown on the monitor.</h1>
+		<input type = "text" id="pin" value = "">
+		<input type = "button" id="acceptPin" value = "Try Pin">
+
+	</div> -->
+	<div id = "controllerScreen">
+		<br><br><br><br>
+		<div id="415" max-width="75%" class="top">415: Operating Systems with Butler</div>
+		<br>
+		<div id="315" max-width="75%" class="top">315: Algorithms with Wilson</div>
+		<br>
+		<div id="330" max-width="75%" class="top">330: C++ and Unix with Norris</div>
+		<br>
+		<div id="422" max-width="75%" class="top">422: Software Methodologies with Faulk</div>
+		<br>
+		<div id="425" max-width="75%" class="top">425: Programming Languages with Ariola</div>
+
+	</div>
+</body>
+</html>
