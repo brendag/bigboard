@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+ -->
+    <title>Faculty App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Sanchez:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <br>
+        <h3 align="center" style="text-transform: uppercase;"><div id="title">Eric Wills</div></h3>
+      </div><br>
+
+      <div class="jumbotron">
+      	<div align="center" >
+  		<video id="video-container"autoplay="autoplay" width="1000" height="" controls>
+  		<source id="video"  src="http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4" type="video/mp4">
+  		</video>
+  		</div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h3 style="text-transform: uppercase;">About the Professor</h3><hr>
+          <p><div id="about">Eric received his Ph.D. in Computer and Information Science from the University of Oregon in 2008. His research focused on 3D animation, visualization, AI, and biomechanics. Eric and Dr. Kent Stevens have collaborated on a number of publications, including 	"Rex, sit: Digital modeling of Tyrannosaurus rex at rest," in P. Larson & K. Carpenter (Eds.), Tyrannosaurus rex: The tyrant king. Bloomington, IN: Indiana University Press (2008).</div></p>
+
+        </div>
+
+        <div class="col-lg-6">
+          <h3 style="text-transform: uppercase;">Course</h3><hr>
+
+          <h4><div id="text">115</div></h4>
+          <p><div id="course_description">Intermediate web programming with an emphasis on multimedia (graphics, audio, video). Uses JavaScript, HTML5, and graphics to build interactive web pages. Prereq: CIS 111.</div></p>
+
+        </div>
+      </div>
+	
+
+      <div class="footer">
+      <br><br>
+        <p align="center">&copy; CS Department | University of Oregon 2014</p>
+      </div>
+
+    </div> 
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script>
+	$(document).ready(init);
+
+function init(){
+		var courses = {"415": "http://ix.cs.uoregon.edu/~etownsen/415.mp4", "330": "http://ix.cs.uoregon.edu/~etownsen/330.mp4", "425": "http://ix.cs.uoregon.edu/~etownsen/425.mp4", "650":"http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/fickas_tenor.mp4", "315": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "115": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4"};
+		var course_info = {"330": "Practical software design and programming activities in a C/C++ and Unix environment, with emphasis on the details of C/C++ and good programming style and practices.", "415": "Principles of operating system design. Process and memory management, concurrency, scheduling, input-output and file systems, security.", "425": "Syntax and semantics. Scope rules, environments, stores, denoted and expressed values, procedures, and parameters. Definitional interpreters. Types, overloading, parametric polymorphism, and inheritance. Varieties of abstraction.", "422": "Technical and nontechnical aspects of software development, including specification, planning, design, development, management and maintenance of software projects. Student teams complete projects.", "115":"Intermediate web programming with an emphasis on multimedia (graphics, audio, video). Uses JavaScript, HTML5, and graphics to build interactive web pages. Prereq: CIS 111.", "315":"Algorithm design, worst-case and average-behavior analysis, correctness, computational complexity.", "650":"Examines recent models and tools in software engineering including modifications to the traditional software life-cycle model, development environments, and speculative view of the future role of artificial intelligence."};
+		var faculty_info = {"Zena Ariola": "Dr. Zena M. Ariola is a Professor in the Department of Computer and Information Science at the University of Oregon. Ariola received the Laurea degree summa cum laude in Informatics from the University of Pisa in 1980. She received the Ph.D. degree in Computer Science from Harvard University in 1992.From 1981 to 1986, Ariola worked at the Olivetti corporation in Pisa, Italy. She also worked as a consultant on the Ada language for the SPL Corporation in Abingdon, United Kindom, and for the General System Group (GSG) in Salem, NH. In 1992, Ariola joined the faculty at Oregon. She also had visiting positions at the Centre for Mathematics and Computer Science (CWI) and Vrije Universiteit in Amsterdam, The Netherlands. Dr. Ariola was awarded the NSF Research Initiation Award in 1994 and the NSF Career award in 1996. She was promoted to Full Professor in 2006.", "Kevin Butler": "Kevin Butler is an Assistant Professor in the Department of Computer and Information at the University of Oregon, where he directs the Oregon Systems Infrastructure Research and Information Security Laboratory. He received his Ph.D. in computer science and engineering from the Pennsylvania State University in 2010. Kevin's research focuses on the security of systems, storage, and networks, including embedded systems and mobile phones, applied cryptography and privacy, and cloud computing. He has also examined malware propagation and web systems, and was a member of the EVEREST study of voting machines for the State of Ohio. He received an NSF CAREER award in 2013, and was program co-chair of ACSAC 2013 and chair for ACSAC 2014. After receiving his M.S. in electrical engineering from Columbia University in 2003, Kevin worked in the Secure Systems Group at AT&T Labs-Research. He also has industrial experience in network operations and research. ", "Stuart Faulk": "", "Boyana Norris": "Boyana Norris received her B.S. in Computer Science at Wake Forest University in 1995 and her Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign in 2000. She was a postdoctoral researcher, assistant scientist, and computer scientist at Argonne National Laboratory from 1999 to 2013. She is currently an Assistant Professor at the Department of Computer and Information Science at the University of Oregon. Her research in high performance computing focuses on defining domain-specific abstractions for computations (including new languages) that can be transformed automatically into high-performance implementations while emphasizing usability and human productivity. ", "Stephen Fickas": "Dr. Stephen Fickas is a Professor in the Department of Computer and Information Science at the University of Oregon. Fickas received the B.S. degree from Oregon State University in Math, the M.S. degree in Computer Science from the University of Massachusetts, and the Ph.D. degree from the University of California at Irvine in 1983. From 1978 to 1983, Fickas worked at USC Information Sciences Institute in Marina del Rey, California. In 1983, Fickas joined the faculty at Oregon. In 1988 he was awarded a Distinguished Visiting Researcher position at Cambridge University. In 1991 he was selected as a Fulbright Research Scholar to the Hungarian Academy of Science. He was promoted to Full Professor in 1996.", "Chris Wilson": "This is Chris Wilson's bio.", "Eric Wills": "Eric received his Ph.D. in Computer and Information Science from the University of Oregon in 2008. His research focused on 3D animation, visualization, AI, and biomechanics. Eric and Dr. Kent Stevens have collaborated on a number of publications, including 	&ldquoRex, sit: Digital modeling of Tyrannosaurus rex at rest,	&rdquo in P. Larson & K. Carpenter (Eds.), Tyrannosaurus rex: The tyrant king. Bloomington, IN: Indiana University Press (2008)."}; 
+		var currentPosition = 0;
+		var fac_names = {"425": "Zena Ariola", "415": "Kevin Butler", "410": "Hank Childs",
+					 "315": "Chris Wilson", "330": "Boyana Norris",
+					 "650": "Stephen Fickas", "115": "Eric Wills"
+					};
+		
+		function movePostion(position){
+			$("#pos"+currentPosition).css( "background-color", "grey" );
+			$("#pos"+position).css( "background-color", "green" );
+			currentPosition = position;
+		}
+		
+		function handleCommand(command){
+
+			var src = courses[command];
+			var myVideo = document.getElementsByTagName('video')[0];
+			if(command=="pause"){
+                myVideo.pause();
+                // document.write("pause!");
+            }
+            else if(command=="play"){
+                myVideo.play()
+                // document.write("play!");
+
+            }
+
+
+
+			myVideo.src = src;
+			myVideo.load();
+			myVideo.play();
+			// $('').html(fac_names[command]);
+			// $("#video-container").find("#video").attr("src", src);
+			// document.write("worked!" + " " + command + " " + src);
+			// if (command == "315"){
+			$('#text').html(command);
+			$('#title').html(fac_names[command]);
+			$('#about').html(faculty_info[fac_names[command]]);
+			$('#course_description').html(course_info[command]);
+			// }
+			// if(command == "422"){
+
+			// }
+			// if(command == "425"){
+
+			// }
+			// if(command == "330"){
+
+			// }
+			// if (command == "330"){
+			// 	var targetPosition = currentPosition-3;
+			// }else if (command == "left"){
+			// 	var targetPosition = currentPosition-1;
+			// }else if (command == "down"){
+			// 	var targetPosition = currentPosition+3;
+			// }else if (command == "right"){
+			// 	var targetPosition = currentPosition+1;
+			// }
+			
+
+			// if (targetPosition >= 0 && targetPosition <= 8){
+			// 	movePostion(targetPosition);
+			// }else if (targetPosition < 0){
+			// 	movePostion(targetPosition+9);
+			// }else if (targetPosition > 8){
+			// 	movePostion(targetPosition%9);
+			// }else{
+			// 	console.log('missing cases...')
+			// }
+		}
+
+		function listener(event){
+			if (event.data.event != "undefined"){
+				var command = event.data;
+				handleCommand(event.data);
+				console.log(event.data);
+			}
+			
+		}
+	 	addEventListener("message", listener, false)
+	 	movePostion(currentPosition);
+	}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

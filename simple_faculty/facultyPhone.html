@@ -92,7 +92,32 @@
 					$("#connectingHeader").html("Failed to connect to monitor manager, please try again.");
 				});
 			});
-			
+
+		$("#115").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "115",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#115").css( "background-color", "white" );
+						$("#115").css( "color", "#004F27" );
+						$("#115").css( "border-style", "solid" );
+						$("#115").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
+
+					}
+				});
+			});
+
 			$("#415").click(function(event){
 				//ask to connect to the monitor
 				$.post(SERVERURL, {event: "415",url: MONITORHTMLURL}, function(data){
@@ -105,10 +130,14 @@
 						$("#315").css( "color", "white" );
 						$("#330").css( "background-color", "#004F27" );
 						$("#330").css( "color", "white" );
-						$("#422").css( "background-color", "#004F27" );
-						$("#422").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
 
 					}
 				});
@@ -126,10 +155,14 @@
 						$("#415").css( "color", "white" );
 						$("#330").css( "background-color", "#004F27" );
 						$("#330").css( "color", "white" );
-						$("#422").css( "background-color", "#004F27" );
-						$("#422").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
 					}
 				});
 			});
@@ -146,22 +179,26 @@
 						$("#315").css( "color", "white" );
 						$("#415").css( "background-color", "#004F27" );
 						$("#415").css( "color", "white" );
-						$("#422").css( "background-color", "#004F27" );
-						$("#422").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
 					}
 				});
 			});
 			
-			$("#422").click(function(event){
+			$("#650").click(function(event){
 				//ask to connect to the monitor
-				$.post(SERVERURL, {event: "422",url: MONITORHTMLURL}, function(data){
+				$.post(SERVERURL, {event: "650",url: MONITORHTMLURL}, function(data){
 					if(data == "success"){
-						$("#422").css( "background-color", "white" );
-						$("#422").css( "color", "#004F27" );
-						$("#422").css( "border-style", "solid" );
-						$("#422").css( "border-color", "#004F27" );
+						$("#650").css( "background-color", "white" );
+						$("#650").css( "color", "#004F27" );
+						$("#650").css( "border-style", "solid" );
+						$("#650").css( "border-color", "#004F27" );
 						$("#315").css( "background-color", "#004F27" );
 						$("#315").css( "color", "white" );
 						$("#415").css( "background-color", "#004F27" );
@@ -170,6 +207,10 @@
 						$("#330").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
 					}
 				});
 			});
@@ -186,35 +227,70 @@
 						$("#315").css( "color", "white" );
 						$("#330").css( "background-color", "#004F27" );
 						$("#330").css( "color", "white" );
-						$("#422").css( "background-color", "#004F27" );
-						$("#422").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
 						$("#415").css( "background-color", "#004F27" );
 						$("#415").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
 					}
 				});
 			});
+			$("#play").click(function(event){
+                        //ask to connect to the monitor
+                $.post(SERVERURL, {event: "play",url: MONITORHTMLURL}, function(data){
+                    if(data == "success"){
+    					$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
+
+                    }
+                });
+            });
+                        
+            $("#pause").click(function(event){
+                    //ask to connect to the monitor
+                $.post(SERVERURL, {event: "pause",url: MONITORHTMLURL}, function(data){
+                        if(data == "success"){
+        				$("#play").css("color", "#FFF");
+    					$("#pause").css("color", "#004F27");
+
+                        }
+                });
+            });
 		}
 	</script>
 </head>
 <body>
-	<!-- <div id = "connectingScreen">
+	<div id = "connectingScreen">
 		<h1 id = "connectingHeader">Enter the pin that is shown on the monitor.</h1>
 		<input type = "text" id="pin" value = "">
 		<input type = "button" id="acceptPin" value = "Try Pin">
 
-	</div> -->
+	</div>
 	<div id = "controllerScreen">
 		<br><br><br><br>
-		<div id="415" max-width="75%" class="top">415: Operating Systems with Butler</div>
-		<br>
-		<div id="315" max-width="75%" class="top">315: Algorithms with Wilson</div>
-		<br>
-		<div id="330" max-width="75%" class="top">330: C++ and Unix with Norris</div>
-		<br>
-		<div id="422" max-width="75%" class="top">422: Software Methodologies with Faulk</div>
-		<br>
-		<div id="425" max-width="75%" class="top">425: Programming Languages with Ariola</div>
 
+		
+		<br>
+		<div id="115"  class="top" style="background-color: white; color: #004F27; border-style: solid; border-color: #004F27;">115: Multimedia Web Programming with Wills</div>
+		<br>
+		<div id="315" class="top">315: Algorithms with Wilson</div>
+		<br>
+		<div id="330" class="top">330: C++ and Unix with Norris</div>
+		<br>
+		<div id="415" class="top">415: Operating Systems with Butler</div>
+		<br>
+		<div id="425"  class="top">425: Programming Languages with Ariola</div>
+		<br>
+		<div id="650"  class="top">650: Software Engineering with Fickas</div>
+
+
+		<div style="width:100%; position: relative;	margin-top: 50px;	height: 50px; align:center; background-color:#202020; color: #FFF;">
+			<table align="center"><tr><td valign="middle"><div id="play" style="color: #004F27;"width="100" height="50">Play<i class="icon-white icon-play"></i></div></td><td  width="25"></td><td><div id="pause" width="100" valign="middle" height="50">Pause<i class="icon-white icon-pause"></i></div></td></tr></table>
+        </div>
 	</div>
+
 </body>
 </html>
