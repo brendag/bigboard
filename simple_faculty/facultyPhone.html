@@ -111,13 +111,39 @@
 						$("#415").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 						$("#play").css("color", "#004F27");
     					$("#pause").css("color", "#FFF");
 
 					}
 				});
 			});
-
+			$("#210").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "210",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#210").css( "background-color", "white" );
+						$("#210").css( "color", "#004F27" );
+						$("#210").css( "border-style", "solid" );
+						$("#210").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#play").css("color", "#004F27");
+    					$("#pause").css("color", "#FFF");
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+					}
+				});
+			});
 			$("#415").click(function(event){
 				//ask to connect to the monitor
 				$.post(SERVERURL, {event: "415",url: MONITORHTMLURL}, function(data){
@@ -138,6 +164,8 @@
 						$("#115").css( "color", "white" );
 						$("#play").css("color", "#004F27");
     					$("#pause").css("color", "#FFF");
+    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 
 					}
 				});
@@ -163,6 +191,8 @@
 						$("#115").css( "color", "white" );
 						$("#play").css("color", "#004F27");
     					$("#pause").css("color", "#FFF");
+    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 					}
 				});
 			});
@@ -187,6 +217,8 @@
 						$("#115").css( "color", "white" );
 						$("#play").css("color", "#004F27");
     					$("#pause").css("color", "#FFF");
+    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 					}
 				});
 			});
@@ -211,6 +243,8 @@
     					$("#pause").css("color", "#FFF");
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
+						$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 					}
 				});
 			});
@@ -235,6 +269,8 @@
     					$("#pause").css("color", "#FFF");
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
+						$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
 					}
 				});
 			});
@@ -275,6 +311,8 @@
 		
 		<br>
 		<div id="115"  class="top" style="background-color: white; color: #004F27; border-style: solid; border-color: #004F27;">115: Multimedia Web Programming with Wills</div>
+		<br>
+		<div id="210" class ="top"> 210: Computer Science I with Young</div>
 		<br>
 		<div id="315" class="top">315: Algorithms with Wilson</div>
 		<br>
