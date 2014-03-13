@@ -18,6 +18,7 @@
     <link href="jumbotron-narrow.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Sanchez:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Varela&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -108,6 +109,7 @@ function init(){
 
 			myVideo.src = src;
 			myVideo.load();
+			myVideo.controls=null;
 			myVideo.play();
 			// $('').html(fac_names[command]);
 			// $("#video-container").find("#video").attr("src", src);
