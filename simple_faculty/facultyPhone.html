@@ -253,7 +253,7 @@
 			
 			$("#425").click(function(event){
 				//ask to connect to the monitor
-				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
+				$.post(SERVERURL, {event: "650",url: MONITORHTMLURL}, function(data){
 					if(data == "success"){
 						$("#425").css( "background-color", "white" );
 						$("#425").css( "color", "#004F27" );
@@ -261,12 +261,12 @@
 						$("#425").css( "border-color", "#004F27" );
 						$("#315").css( "background-color", "#004F27" );
 						$("#315").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
 						$("#330").css( "background-color", "#004F27" );
 						$("#330").css( "color", "white" );
 						$("#650").css( "background-color", "#004F27" );
 						$("#650").css( "color", "white" );
-						$("#415").css( "background-color", "#004F27" );
-						$("#415").css( "color", "white" );
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
 						$("#210").css( "background-color", "#004F27" );
@@ -274,30 +274,31 @@
 						$("#210student").css( "background-color", "#004F27" );
 						$("#210student").css( "color", "white" );
 					}
-				});
+				})
 			});
 
 			$("#210student").click(function(event){
 				//ask to connect to the monitor
 				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
 					if(data == "success"){
-						$("#425").css( "background-color", "#004F27" );
-						$("#425").css( "color", "white" );
-						$("#425").css( "color", "white" );
-						$("#425").css( "background-color", "#004F27" );
-						$("#330").css( "color", "white" );
-						$("#650").css( "background-color", "#004F27" );
-						$("#650").css( "color", "white" );
-						$("#415").css( "background-color", "#004F27" );
-						$("#415").css( "color", "white" );
-						$("#115").css( "background-color", "#004F27" );
-						$("#115").css( "color", "white" );
-						$("#210").css( "background-color", "#004F27" );
-						$("#210").css( "color", "white" );
 						$("#210student").css( "background-color", "white" );
 						$("#210student").css( "color", "#004F27" );
 						$("#210student").css( "border-style", "solid" );
 						$("#210student").css( "border-color", "#004F27" );
+						$("#315").css( "background-color", "#004F27" );
+						$("#315").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#330").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
 					}
 				});
 			});
