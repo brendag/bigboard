@@ -253,7 +253,7 @@
 			
 			$("#425").click(function(event){
 				//ask to connect to the monitor
-				$.post(SERVERURL, {event: "650",url: MONITORHTMLURL}, function(data){
+				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
 					if(data == "success"){
 						$("#425").css( "background-color", "white" );
 						$("#425").css( "color", "#004F27" );
@@ -279,7 +279,7 @@
 
 			$("#210student").click(function(event){
 				//ask to connect to the monitor
-				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
+				$.post(SERVERURL, {event: "210student",url: MONITORHTMLURL}, function(data){
 					if(data == "success"){
 						$("#210student").css( "background-color", "white" );
 						$("#210student").css( "color", "#004F27" );
