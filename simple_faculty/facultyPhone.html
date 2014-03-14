@@ -3,13 +3,13 @@
 <head>
 <meta charset="US-ASCII">
 <title>Faculty Controller</title>
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Sanchez:400,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Varela&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- Custom styles for this template -->
+	<link href="jumbotron-narrow.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Sanchez:400,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Varela&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 
 
@@ -116,9 +116,8 @@
 						$("#425").css( "color", "white" );
 						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
-
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
@@ -138,12 +137,12 @@
 						$("#650").css( "color", "white" );
 						$("#415").css( "background-color", "#004F27" );
 						$("#415").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
@@ -165,10 +164,10 @@
 						$("#425").css( "color", "white" );
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
-    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 
 					}
 				});
@@ -192,10 +191,10 @@
 						$("#425").css( "color", "white" );
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
-    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
@@ -218,10 +217,10 @@
 						$("#425").css( "color", "white" );
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
-    					$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
@@ -242,12 +241,12 @@
 						$("#330").css( "color", "white" );
 						$("#425").css( "background-color", "#004F27" );
 						$("#425").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
 						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
@@ -268,36 +267,40 @@
 						$("#650").css( "color", "white" );
 						$("#415").css( "background-color", "#004F27" );
 						$("#415").css( "color", "white" );
-						$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
 						$("#115").css( "background-color", "#004F27" );
 						$("#115").css( "color", "white" );
 						$("#210").css( "background-color", "#004F27" );
 						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "#004F27" );
+						$("#210student").css( "color", "white" );
 					}
 				});
 			});
-			$("#play").click(function(event){
-                        //ask to connect to the monitor
-                $.post(SERVERURL, {event: "play",url: MONITORHTMLURL}, function(data){
-                    if(data == "success"){
-    					$("#play").css("color", "#004F27");
-    					$("#pause").css("color", "#FFF");
 
-                    }
-                });
-            });
-                        
-            $("#pause").click(function(event){
-                    //ask to connect to the monitor
-                $.post(SERVERURL, {event: "pause",url: MONITORHTMLURL}, function(data){
-                        if(data == "success"){
-        				$("#play").css("color", "#FFF");
-    					$("#pause").css("color", "#004F27");
-
-                        }
-                });
-            });
+			$("#210student").click(function(event){
+				//ask to connect to the monitor
+				$.post(SERVERURL, {event: "425",url: MONITORHTMLURL}, function(data){
+					if(data == "success"){
+						$("#425").css( "background-color", "#004F27" );
+						$("#425").css( "color", "white" );
+						$("#425").css( "color", "white" );
+						$("#425").css( "background-color", "#004F27" );
+						$("#330").css( "color", "white" );
+						$("#650").css( "background-color", "#004F27" );
+						$("#650").css( "color", "white" );
+						$("#415").css( "background-color", "#004F27" );
+						$("#415").css( "color", "white" );
+						$("#115").css( "background-color", "#004F27" );
+						$("#115").css( "color", "white" );
+						$("#210").css( "background-color", "#004F27" );
+						$("#210").css( "color", "white" );
+						$("#210student").css( "background-color", "white" );
+						$("#210student").css( "color", "#004F27" );
+						$("#210student").css( "border-style", "solid" );
+						$("#210student").css( "border-color", "#004F27" );
+					}
+				});
+			});
 		}
 	</script>
 </head>
@@ -315,7 +318,8 @@
 		<br>
 		<div id="115"  class="top" style="background-color: white; color: #004F27; border-style: solid; border-color: #004F27;">115: Multimedia Web Programming with Wills</div>
 		<br>
-		<div id="210" class ="top"> 210: Computer Science I with Young</div>
+		<div id="210" 		 class="top" style="width:50%">210: Computer Science I with Young</div>
+		<div id="210student" class="top" style="width:50%">Student Perspective</div>
 		<br>
 		<div id="315" class="top">315: Algorithms with Wilson</div>
 		<br>
@@ -326,11 +330,6 @@
 		<div id="425"  class="top">425: Programming Languages with Ariola</div>
 		<br>
 		<div id="650"  class="top">650: Software Engineering with Fickas</div>
-
-
-		<div style="width:100%; position: relative;	margin-top: 50px;	height: 50px; align:center; background-color:#202020; color: #FFF;">
-			<table align="center"><tr><td valign="middle"><div id="play" style="color: #004F27;"width="100" height="50">Play<i class="icon-white icon-play"></i></div></td><td  width="25"></td><td><div id="pause" width="100" valign="middle" height="50">Pause<i class="icon-white icon-pause"></i></div></td></tr></table>
-        </div>
 	</div>
 
 </body>
