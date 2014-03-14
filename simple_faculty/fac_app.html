@@ -48,7 +48,7 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h3 style="text-transform: uppercase;">About the Professor</h3><hr>
+          <h3 style="text-transform: uppercase;"><div id="studentFac">About the Professor<div></h3><hr>
           <p><div id="about">Eric received his Ph.D. in Computer and Information Science from the University of Oregon in 2008. His research focused on 3D animation, visualization, AI, and biomechanics. Eric and Dr. Kent Stevens have collaborated on a number of publications, including 	"Rex, sit: Digital modeling of Tyrannosaurus rex at rest," in P. Larson & K. Carpenter (Eds.), Tyrannosaurus rex: The tyrant king. Bloomington, IN: Indiana University Press (2008).</div></p>
 
         </div>
@@ -78,7 +78,7 @@
 	$(document).ready(init);
 
 function init(){
-		var courses = {"415": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "330": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "650":"http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/fickas_tenor.mp4", "315": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "115": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "425": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "210": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/young.mp4"};
+		var courses = {"415": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "330": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "650":"http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/fickas_tenor.mp4", "315": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "115": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "425": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/stock.mp4", "210": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/young.mp4", "210student": "http://ix.cs.uoregon.edu/~brendag/simple_faculty/simple_faculty/210Student.mp4"};
 		var course_info = {"330": "Practical software design and programming activities in a C/C++ and Unix environment, with emphasis on the details of C/C++ and good programming style and practices.", "415": "Principles of operating system design. Process and memory management, concurrency, scheduling, input-output and file systems, security.", "425": "Syntax and semantics. Scope rules, environments, stores, denoted and expressed values, procedures, and parameters. Definitional interpreters. Types, overloading, parametric polymorphism, and inheritance. Varieties of abstraction.", "422": "Technical and nontechnical aspects of software development, including specification, planning, design, development, management and maintenance of software projects. Student teams complete projects.", "115":"Intermediate web programming with an emphasis on multimedia (graphics, audio, video). Uses JavaScript, HTML5, and graphics to build interactive web pages. Prereq: CIS 111.", "315":"Algorithm design, worst-case and average-behavior analysis, correctness, computational complexity.", "650":"Examines recent models and tools in software engineering including modifications to the traditional software life-cycle model, development environments, and speculative view of the future role of artificial intelligence.", "210": "Basic concepts and practices of computer science. Topics include algorithmic problem solving, levels of abstraction, object-oriented design and programming, software organization, analysis of algorithm and data structures."};
 		var faculty_info = {"Zena Ariola": "Dr. Zena M. Ariola is a Professor in the Department of Computer and Information Science at the University of Oregon. Ariola received the Laurea degree summa cum laude in Informatics from the University of Pisa in 1980. She received the Ph.D. degree in Computer Science from Harvard University in 1992.From 1981 to 1986, Ariola worked at the Olivetti corporation in Pisa, Italy. She also worked as a consultant on the Ada language for the SPL Corporation in Abingdon, United Kindom, and for the General System Group (GSG) in Salem, NH. In 1992, Ariola joined the faculty at Oregon. She also had visiting positions at the Centre for Mathematics and Computer Science (CWI) and Vrije Universiteit in Amsterdam, The Netherlands. Dr. Ariola was awarded the NSF Research Initiation Award in 1994 and the NSF Career award in 1996. She was promoted to Full Professor in 2006.", "Kevin Butler": "Kevin Butler is an Assistant Professor in the Department of Computer and Information at the University of Oregon, where he directs the Oregon Systems Infrastructure Research and Information Security Laboratory. He received his Ph.D. in computer science and engineering from the Pennsylvania State University in 2010. Kevin's research focuses on the security of systems, storage, and networks, including embedded systems and mobile phones, applied cryptography and privacy, and cloud computing. He has also examined malware propagation and web systems, and was a member of the EVEREST study of voting machines for the State of Ohio. He received an NSF CAREER award in 2013, and was program co-chair of ACSAC 2013 and chair for ACSAC 2014. After receiving his M.S. in electrical engineering from Columbia University in 2003, Kevin worked in the Secure Systems Group at AT&T Labs-Research. He also has industrial experience in network operations and research. ", "Stuart Faulk": "", "Boyana Norris": "Boyana Norris received her B.S. in Computer Science at Wake Forest University in 1995 and her Ph.D. in Computer Science from the University of Illinois at Urbana-Champaign in 2000. She was a postdoctoral researcher, assistant scientist, and computer scientist at Argonne National Laboratory from 1999 to 2013. She is currently an Assistant Professor at the Department of Computer and Information Science at the University of Oregon. Her research in high performance computing focuses on defining domain-specific abstractions for computations (including new languages) that can be transformed automatically into high-performance implementations while emphasizing usability and human productivity. ", "Stephen Fickas": "Dr. Stephen Fickas is a Professor in the Department of Computer and Information Science at the University of Oregon. Fickas received the B.S. degree from Oregon State University in Math, the M.S. degree in Computer Science from the University of Massachusetts, and the Ph.D. degree from the University of California at Irvine in 1983. From 1978 to 1983, Fickas worked at USC Information Sciences Institute in Marina del Rey, California. In 1983, Fickas joined the faculty at Oregon. In 1988 he was awarded a Distinguished Visiting Researcher position at Cambridge University. In 1991 he was selected as a Fulbright Research Scholar to the Hungarian Academy of Science. He was promoted to Full Professor in 1996.", "Chris Wilson": "This is Chris Wilson's bio.", "Eric Wills": "Eric received his Ph.D. in Computer and Information Science from the University of Oregon in 2008. His research focused on 3D animation, visualization, AI, and biomechanics. Eric and Dr. Kent Stevens have collaborated on a number of publications, including 	&ldquoRex, sit: Digital modeling of Tyrannosaurus rex at rest,	&rdquo in P. Larson & K. Carpenter (Eds.), Tyrannosaurus rex: The tyrant king. Bloomington, IN: Indiana University Press (2008).", "Michal Young": "The thread that runs through my work is understanding how we understand and gain confidence in software, through some combination of analysis (broadly construed to include testing as well as various static checking techniques) and design. I'm increasingly interested in interplay between synthesis (generating something from a spec) and analysis (checking consistency between a spec and an implementation). The synthesis part is related to an old interest in architectural design of software, which I've recently revisited in connection with assistive cartography."}; 
 		var currentPosition = 0;
@@ -109,16 +109,27 @@ function init(){
 
 			myVideo.src = src;
 			myVideo.load();
-			myVideo.controls=null;
 			myVideo.play();
 			// $('').html(fac_names[command]);
 			// $("#video-container").find("#video").attr("src", src);
 			// document.write("worked!" + " " + command + " " + src);
 			// if (command == "315"){
-			$('#text').html(command);
-			$('#title').html(fac_names[command]);
-			$('#about').html(faculty_info[fac_names[command]]);
-			$('#course_description').html(course_info[command]);
+			if(command !== "210student"){
+				$('#text').html(command);
+				$('#title').html(fac_names[command]);
+				$('#about').html(faculty_info[fac_names[command]]);
+				$('#course_description').html(course_info[command]);
+
+			}
+
+			if(command === "210student"){
+				$('#studentFac').html("Former Student");
+				$('#text').html("210");
+				$('#title').html("210 from a Student's Perspective");
+				$('#about').html("Dylon, Junior in Computer Science");
+				$('#course_description').html(course_info["210"]);
+
+			}
 			// }
 			// if(command == "422"){
 
